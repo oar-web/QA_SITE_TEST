@@ -1,0 +1,5 @@
+{
+  "name": "QA-Nexus Integrated Management System",
+  "description": "A comprehensive QA collaboration platform for issue tracking, release management, and document archiving, based on the QA-Nexus RFP requirements.",
+  "requestFramePermissions": []
+}
