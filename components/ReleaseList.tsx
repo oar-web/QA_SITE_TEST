@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
-import { mockReleases, mockIssues } from '../services/mockData';
-import { generateReleaseNotes } from '../services/geminiService';
+import { mockReleases, mockIssues } from '../services/mockData.ts';
+import { generateReleaseNotes } from '../services/geminiService.ts';
 
 const ReleaseList: React.FC = () => {
   const [selectedRel, setSelectedRel] = useState(mockReleases[0]);

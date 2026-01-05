@@ -1,8 +1,8 @@
 
 import React, { useState } from 'react';
-import { mockIssues } from '../services/mockData';
-import { STATUS_COLORS, PRIORITY_COLORS, Icons } from '../constants';
-import { IssueStatus, IssueType, Priority } from '../types';
+import { mockIssues } from '../services/mockData.ts';
+import { STATUS_COLORS, PRIORITY_COLORS, Icons } from '../constants.tsx';
+import { IssueStatus, IssueType, Priority } from '../types.ts';
 
 const IssueList: React.FC = () => {
   const [filterType, setFilterType] = useState<string>('전체');
@@ -94,13 +94,11 @@ const IssueList: React.FC = () => {
                     <span className="text-xs font-medium text-slate-500">{issue.type}</span>
                   </td>
                   <td className="px-6 py-5">
-                    {/* Fix: Conversion of type 'IssueStatus' to type 'keyof typeof STATUS_COLORS' by using intermediate 'unknown' cast */}
                     <span className={`px-2.5 py-1 rounded-full text-[10px] font-black tracking-tighter ${STATUS_COLORS[issue.status as unknown as keyof typeof STATUS_COLORS] || 'bg-slate-100 text-slate-400'}`}>
                       {issue.status}
                     </span>
                   </td>
                   <td className="px-6 py-5">
-                    {/* Fix: Conversion of type 'Priority' to type 'keyof typeof PRIORITY_COLORS' by using intermediate 'unknown' cast */}
                     <span className={`px-2 py-0.5 rounded text-[10px] font-bold ${PRIORITY_COLORS[issue.priority as unknown as keyof typeof PRIORITY_COLORS]}`}>
                       {issue.priority}
                     </span>

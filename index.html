@@ -9,6 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- 브라우저에서 TSX를 직접 실행하기 위한 Babel -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <style>
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -32,6 +34,8 @@
 </head>
 <body>
   <div id="root"></div>
+  <!-- 실행 진입점 추가 -->
+  <script type="text/babel" data-type="module" src="./index.tsx"></script>
 <script type="module" src="/index.tsx"></script>
 </body>
 </html>

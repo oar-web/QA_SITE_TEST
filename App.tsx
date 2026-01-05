@@ -1,11 +1,11 @@
 
 import React, { useState } from 'react';
-import Sidebar from './components/Sidebar';
-import Layout from './components/Layout';
-import Dashboard from './components/Dashboard';
-import IssueList from './components/IssueList';
-import ReleaseList from './components/ReleaseList';
-import DocumentLibrary from './components/DocumentLibrary';
+import Sidebar from './components/Sidebar.tsx';
+import Layout from './components/Layout.tsx';
+import Dashboard from './components/Dashboard.tsx';
+import IssueList from './components/IssueList.tsx';
+import ReleaseList from './components/ReleaseList.tsx';
+import DocumentLibrary from './components/DocumentLibrary.tsx';
 
 const App: React.FC = () => {
   const [currentTab, setCurrentTab] = useState<string>('dashboard');

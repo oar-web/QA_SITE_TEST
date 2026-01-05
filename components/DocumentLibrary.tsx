@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
-import { mockDocuments } from '../services/mockData';
-import { DocType, DocStatus } from '../types';
+import { mockDocuments } from '../services/mockData.ts';
+import { DocType, DocStatus } from '../types.ts';
 
 const DocumentLibrary: React.FC = () => {
   const [filterType, setFilterType] = useState<string>('전체');

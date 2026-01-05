@@ -2,7 +2,9 @@
 import { GoogleGenAI } from "@google/genai";
 
 const getAIClient = () => {
-  return new GoogleGenAI({ apiKey: process.env.API_KEY });
+  // 브라우저 환경에서 process.env가 없을 경우를 대비한 안전 장치
+  const apiKey = typeof process !== 'undefined' ? process.env.API_KEY : '';
+  return new GoogleGenAI({ apiKey: apiKey || '' });
 };
 
 export const summarizeIssue = async (title: string, description: string) => {

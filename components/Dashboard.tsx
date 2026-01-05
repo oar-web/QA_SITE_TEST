@@ -1,9 +1,9 @@
 
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell, PieChart, Pie, Legend } from 'recharts';
-import { mockTimeline, mockIssues, mockReleases } from '../services/mockData';
-import { STATUS_COLORS, Icons } from '../constants';
-import { IssueStatus } from '../types';
+import { mockTimeline, mockIssues, mockReleases } from '../services/mockData.ts';
+import { STATUS_COLORS, Icons } from '../constants.tsx';
+import { IssueStatus } from '../types.ts';
 
 const Dashboard: React.FC = () => {
   const stats = [
